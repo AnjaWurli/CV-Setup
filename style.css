@@ -47,6 +47,7 @@ header li:hover {
 /* ------------------------------------------------------------ */
 
 article + article {
+  /* could also use .spiderbody > * + * ... */
   margin-top: 50px;
   border-top: thick double black;
 }
@@ -62,5 +63,15 @@ header a:hover {
 }
 
 header a:active {
-  color: black;
+  color: cadetblue;
+}
+
+::selection {
+  background-color: black;
+  color: cadetblue;
+}
+
+#profession::after {
+  content: "🕸️";
+  background-color: black;
 }
