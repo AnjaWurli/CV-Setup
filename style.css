@@ -1,4 +1,7 @@
-* {
+/* ****** general styling ****** */
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -19,10 +22,36 @@ h6 {
   font-family: "Rubik Microbe", cursive;
 }
 
+::selection {
+  background-color: black;
+  color: cadetblue;
+}
+
+/* ******* specific styling ******** */
 .spiderhead {
   padding: 60px;
   text-align: center;
   background-color: cadetblue;
+}
+
+.nav-link {
+  /* could also use .spiderhead a */
+  margin-right: 50px;
+  margin-left: 50px; /*otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
+  color: powderblue;
+}
+
+.nav-link:hover {
+  background-color: black;
+}
+
+.nav-link:active {
+  color: cadetblue;
+}
+
+#profession::after {
+  content: "🕸️";
+  background-color: black;
 }
 
 .spiderbody {
@@ -31,50 +60,26 @@ h6 {
   margin: 0 auto; /*center the element with auto margin*/
 }
 
-/* for the list of navigation elements, that I don't use anymore */
-.spider {
-  max-width: 60px; /* list numbers back next to the content through minimize the width*/
-  margin: 0 auto; /* back in the center*/
-}
-header li {
-  margin-bottom: 7px;
-  color: powderblue;
-}
-header li:hover {
-  background-color: black;
-  font-size: large;
-}
-/* ------------------------------------------------------------ */
-
-article + article {
+.spiderbody > article + article {
   /* could also use .spiderbody > * + * ... */
   margin-top: 50px;
   border-top: thick double black;
 }
 
-header a {
-  margin-right: 50px;
-  margin-left: 50px; /*otherwise its too much at one side; could also use header a + a -> margin-left*/
+/* ---for the list of navigation elements, that I don't use anymore--- */
+.spider {
+  max-width: 60px; /* list numbers back next to the content through minimize the width*/
+  margin: 0 auto; /* back in the center*/
+}
+.spider li {
+  margin-bottom: 7px;
   color: powderblue;
 }
-
-header a:hover {
+.spider li:hover {
   background-color: black;
+  font-size: large;
 }
-
-header a:active {
-  color: cadetblue;
-}
-
-::selection {
-  background-color: black;
-  color: cadetblue;
-}
-
-#profession::after {
-  content: "🕸️";
-  background-color: black;
-}
+/* ------------------------------------------------------------------ */
 
 /* ----------- heart shaped checkbox --------------*/
 .custom {
