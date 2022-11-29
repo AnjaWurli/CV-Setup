@@ -19,11 +19,6 @@ h6 {
   font-family: "Rubik Microbe", cursive;
 }
 
-.spider {
-  max-width: 60px; /* list numbers back to the content through minimize the width*/
-  margin: 0 auto; /* back in the center*/
-}
-
 .spiderhead {
   padding: 60px;
   text-align: center;
@@ -34,4 +29,38 @@ h6 {
   padding: 60px;
   max-width: 800px; /*maximale Screenbreite */
   margin: 0 auto; /*center the element with auto margin*/
+}
+
+/* for the list of navigation elements, that I don't use anymore */
+.spider {
+  max-width: 60px; /* list numbers back next to the content through minimize the width*/
+  margin: 0 auto; /* back in the center*/
+}
+header li {
+  margin-bottom: 7px;
+  color: powderblue;
+}
+header li:hover {
+  background-color: black;
+  font-size: large;
+}
+/* ------------------------------------------------------------ */
+
+article + article {
+  margin-top: 50px;
+  border-top: thick double black;
+}
+
+header a {
+  margin-right: 50px;
+  margin-left: 50px; /*otherwise its too much at one side; could also use header a + a -> margin-left*/
+  color: powderblue;
+}
+
+header a:hover {
+  background-color: black;
+}
+
+header a:active {
+  color: black;
 }
