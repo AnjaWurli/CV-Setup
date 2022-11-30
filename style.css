@@ -14,6 +14,18 @@ html {
   font-size: 16px;
 }
 
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -45,6 +57,12 @@ h1 {
 
 #profession {
   font-size: 0.25em;
+}
+
+@media print {
+  nav {
+    display: none;
+  }
 }
 
 .nav-link {
@@ -80,6 +98,18 @@ h1 {
   box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem black; /* offset-x, offset-y, blur-radius, spread-radius, color*/
 }
 
+@media screen and (min-width: 992px) {
+  #hire {
+    position: fixed;
+  }
+}
+
+@media print {
+  #hire {
+    display: none;
+  }
+}
+
 .spiderbody {
   padding: 4rem;
   padding-left: 5rem; /* add 20px that the headings moved left*/
@@ -91,6 +121,18 @@ h1 {
   /* could also use .spiderbody > * + * ... */
   margin-top: 3rem;
   border-top: thick double black;
+}
+
+@media screen and (min-width: 786px) {
+  .spiderbody > * + * {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .spiderbody > * + * {
+    margin-top: 5rem;
+  }
 }
 
 .period {
@@ -117,19 +159,6 @@ article > h2 {
 .spider li:hover {
   background-color: black;
   font-size: large;
-}
-
-#hireme {
-  position: sticky;
-  top: 1.2rem;
-  left: 90%;
-  width: 6rem;
-  background-color: indianred;
-  padding: 1.2rem;
-  color: powderblue;
-  border-radius: 1.2rem;
-  border: 0.1rem solid powderblue;
-  box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem black; /* offset-x, offset-y, blur-radius, spread-radius, color*/
 }
 /* ------------------------------------------------------------------ */
 
