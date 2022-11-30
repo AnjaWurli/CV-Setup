@@ -6,11 +6,12 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 html {
   font-family: "Oswald", sans-serif;
+  font-size: 16px;
 }
 
 h1,
@@ -29,16 +30,28 @@ h6 {
 
 /* ******* specific styling ******** */
 .spiderhead {
-  padding: 60px;
+  padding: 4rem;
   text-align: center;
   background-color: cadetblue;
 }
 
+.title {
+  font-size: 4rem;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+#profession {
+  font-size: 0.25em;
+}
+
 .nav-link {
   /* could also use .spiderhead a */
-  margin-inline: 50px; /*both sides, otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
+  margin-inline: 3rem; /*both sides, otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
   color: powderblue;
-  text-underline-offset: 2px;
+  text-underline-offset: 0.1rem;
   transition: background-color 0.5s;
 }
 
@@ -57,42 +70,42 @@ h6 {
 
 #hire {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1.2rem;
+  right: 1.2rem;
   background-color: indianred;
-  padding: 20px;
+  padding: 1.2rem;
   color: powderblue;
-  border-radius: 20px;
-  border: 2px solid powderblue;
-  box-shadow: 4px 4px 20px 2px black; /* offset-x, offset-y, blur-radius, spread-radius, color*/
+  border-radius: 1.2rem;
+  border: 0.1rem solid powderblue;
+  box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem black; /* offset-x, offset-y, blur-radius, spread-radius, color*/
 }
 
 .spiderbody {
-  padding: 60px;
-  padding-left: 80px; /* add 20px that the headings moved left*/
-  max-width: 800px; /*maximale Screenbreite */
+  padding: 4rem;
+  padding-left: 5rem; /* add 20px that the headings moved left*/
+  max-width: 75ch; /*maximale Screenbreite */
   margin: 0 auto; /*center the element with auto margin*/
 }
 
 .spiderbody > article + article {
   /* could also use .spiderbody > * + * ... */
-  margin-top: 50px;
+  margin-top: 3rem;
   border-top: thick double black;
 }
 
 .period {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 1.3rem;
   margin-block: 0;
-  _border: 2px solid black;
+  _border: 0.1rem solid black;
 }
 
 article > h2 {
   position: relative;
-  left: -20px;
+  left: -1.2rem;
 }
 
-/* ---for the list of navigation elements, that I don't use anymore--- */
+/* ---for things, that I don't use anymore---------------------------- */
 .spider {
   max-width: 60px; /* list numbers back next to the content through minimize the width*/
   margin: 0 auto; /* back in the center*/
@@ -104,6 +117,19 @@ article > h2 {
 .spider li:hover {
   background-color: black;
   font-size: large;
+}
+
+#hireme {
+  position: sticky;
+  top: 1.2rem;
+  left: 90%;
+  width: 6rem;
+  background-color: indianred;
+  padding: 1.2rem;
+  color: powderblue;
+  border-radius: 1.2rem;
+  border: 0.1rem solid powderblue;
+  box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem black; /* offset-x, offset-y, blur-radius, spread-radius, color*/
 }
 /* ------------------------------------------------------------------ */
 
