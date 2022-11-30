@@ -66,6 +66,14 @@ h6 {
   border-top: thick double black;
 }
 
+.period {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  _border: 2px solid black;
+}
+
 /* ---for the list of navigation elements, that I don't use anymore--- */
 .spider {
   max-width: 60px; /* list numbers back next to the content through minimize the width*/
@@ -115,12 +123,17 @@ h6 {
   border-radius: 50px 50px 0 0; /* make the top edge round */
   transform: rotate(-45deg); /* 45 degrees rotation counter clockwise */
   transform-origin: 0 100%; /* Rotate it around the bottom-left corner */
+  border-top: 2px solid red;
 }
 
 .custom:after {
   left: 0; /* placing the right part properly */
   transform: rotate(45deg); /* rotating 45 degrees clockwise */
   transform-origin: 100% 100%; /* rotation is around bottom-right corner this time */
+  border-right: 2px solid red;
+}
+.custom:before {
+  border-left: 2px solid red;
 }
 /* source: https://stackoverflow.com/questions/17386168/how-to-create-a-heart-shape-using-css */
 /* ----------- heart shaped checkbox --------------*/
