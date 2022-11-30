@@ -36,9 +36,10 @@ h6 {
 
 .nav-link {
   /* could also use .spiderhead a */
-  margin-right: 50px;
-  margin-left: 50px; /*otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
+  margin-inline: 50px; /*both sides, otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
   color: powderblue;
+  text-underline-offset: 2px;
+  transition: background-color 0.5s;
 }
 
 .nav-link:hover {
@@ -54,8 +55,21 @@ h6 {
   background-color: black;
 }
 
+#hire {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: indianred;
+  padding: 20px;
+  color: powderblue;
+  border-radius: 20px;
+  border: 2px solid powderblue;
+  box-shadow: 4px 4px 20px 2px black; /* offset-x, offset-y, blur-radius, spread-radius, color*/
+}
+
 .spiderbody {
   padding: 60px;
+  padding-left: 80px; /* add 20px that the headings moved left*/
   max-width: 800px; /*maximale Screenbreite */
   margin: 0 auto; /*center the element with auto margin*/
 }
@@ -69,9 +83,13 @@ h6 {
 .period {
   display: inline-block;
   margin-right: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block: 0;
   _border: 2px solid black;
+}
+
+article > h2 {
+  position: relative;
+  left: -20px;
 }
 
 /* ---for the list of navigation elements, that I don't use anymore--- */
@@ -95,16 +113,16 @@ h6 {
   aspect-ratio: 1 / 0.9;
   position: relative;
   margin: 0 auto;
-  color: red;
+  color: indianred;
   padding-top: 15px;
   text-align: center;
 }
 
 #check:checked + label > .custom:before {
-  background: red;
+  background: indianred;
 }
 #check:checked + label > .custom:after {
-  background: red;
+  background: indianred;
 }
 
 #check {
@@ -119,21 +137,21 @@ h6 {
   top: 0;
   width: 50px;
   height: 80px;
-  _background: red;
+  _background: indianred;
   border-radius: 50px 50px 0 0; /* make the top edge round */
   transform: rotate(-45deg); /* 45 degrees rotation counter clockwise */
   transform-origin: 0 100%; /* Rotate it around the bottom-left corner */
-  border-top: 2px solid red;
+  border-top: 2px solid indianred;
 }
 
 .custom:after {
   left: 0; /* placing the right part properly */
   transform: rotate(45deg); /* rotating 45 degrees clockwise */
   transform-origin: 100% 100%; /* rotation is around bottom-right corner this time */
-  border-right: 2px solid red;
+  border-right: 2px solid indianred;
 }
 .custom:before {
-  border-left: 2px solid red;
+  border-left: 2px solid indianred;
 }
 /* source: https://stackoverflow.com/questions/17386168/how-to-create-a-heart-shape-using-css */
 /* ----------- heart shaped checkbox --------------*/
