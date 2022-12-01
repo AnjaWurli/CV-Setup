@@ -65,12 +65,29 @@ h1 {
   }
 }
 
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  _border: 2px solid red;
+  margin-left: 3rem;
+}
+
+@media screen and (min-width: 786px) {
+  .nav {
+    flex-direction: row;
+  }
+}
+
 .nav-link {
   /* could also use .spiderhead a */
   margin-inline: 3rem; /*both sides, otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
   color: powderblue;
+  padding-top: 1rem;
   text-underline-offset: 0.1rem;
   transition: background-color 0.5s;
+  _border: 2px solid black;
 }
 
 .nav-link:hover {
@@ -135,32 +152,32 @@ h1 {
   }
 }
 
+.jobs {
+  display: flex;
+  flex-direction: column;
+  _border: 2px solid red;
+}
+
+@media screen and (min-width: 786px) {
+  .jobs {
+    flex-direction: row;
+  }
+}
+
 .period {
   display: inline-block;
-  margin-right: 1.3rem;
   margin-block: 0;
   _border: 0.1rem solid black;
+}
+
+.jobs p {
+  margin-left: 1.3rem;
 }
 
 article > h2 {
   position: relative;
   left: -1.2rem;
 }
-
-/* ---for things, that I don't use anymore---------------------------- */
-.spider {
-  max-width: 60px; /* list numbers back next to the content through minimize the width*/
-  margin: 0 auto; /* back in the center*/
-}
-.spider li {
-  margin-bottom: 7px;
-  color: powderblue;
-}
-.spider li:hover {
-  background-color: black;
-  font-size: large;
-}
-/* ------------------------------------------------------------------ */
 
 /* ----------- heart shaped checkbox --------------*/
 .custom {
@@ -171,6 +188,7 @@ article > h2 {
   color: indianred;
   padding-top: 15px;
   text-align: center;
+  font-size: 16px;
 }
 
 #check:checked + label > .custom:before {
