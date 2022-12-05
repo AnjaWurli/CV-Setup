@@ -26,6 +26,28 @@ html {
   }
 }
 
+body {
+  --theme-color: cadetblue;
+  --theme-accent: powderblue;
+  --theme-contrast: indianred;
+  --shadow-color: black;
+  --page-background-color: white;
+  color: var(--shadow-color);
+  background-color: var(--page-background-color);
+}
+
+/*
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --page-background-color: rgb(12, 46, 46);
+    --shadow-color: lightgrey;
+    --theme-color: teal;
+    --theme-accent: cadetblue;
+    --theme-contrast: maroon;
+  }
+}
+*/
+
 h1,
 h2,
 h3,
@@ -36,20 +58,20 @@ h6 {
 }
 
 ::selection {
-  background-color: black;
-  color: cadetblue;
+  background-color: var(--shadow-color);
+  color: var(--theme-accent);
 }
 
 /* ******* specific styling ******** */
 .spiderhead {
   padding: 4rem;
   text-align: center;
-  background-color: cadetblue;
+  background-color: var(--theme-color);
   background-image: linear-gradient(
     #0000003a,
-    cadetblue 20% 60%,
-    indianred 90%,
-    white
+    var(--theme-color) 20% 60%,
+    var(--theme-contrast) 90%,
+    var(--page-background-color)
   );
 }
 
@@ -89,7 +111,7 @@ h1 {
 .nav-link {
   /* could also use .spiderhead a */
   margin-inline: 3rem; /*both sides, otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
-  color: powderblue;
+  color: var(--theme-accent);
   padding-top: 1rem;
   text-underline-offset: 0.1rem;
   transition: background-color 0.5s;
@@ -97,28 +119,32 @@ h1 {
 }
 
 .nav-link:hover {
-  background-color: black;
+  background-color: var(--shadow-color);
 }
 
 .nav-link:active {
-  color: cadetblue;
+  color: var(--theme-color);
 }
 
 #profession::after {
   content: "🕸️";
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.688);
+  border-radius: 5rem;
+  padding-inline: 0.3rem;
+  padding-bottom: 0.1rem;
+  margin: 0.5rem;
 }
 
 #hire {
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
-  background-color: indianred;
+  background-color: var(--theme-contrast);
   padding: 1.2rem;
-  color: powderblue;
+  color: var(--theme-accent);
   border-radius: 1.2rem;
-  border: 0.1rem solid powderblue;
-  box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem black; /* offset-x, offset-y, blur-radius, spread-radius, color*/
+  border: 0.1rem solid var(--theme-accent);
+  box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem var(--shadow-color); /* offset-x, offset-y, blur-radius, spread-radius, color*/
 }
 
 @media screen and (min-width: 992px) {
@@ -143,7 +169,7 @@ h1 {
 .spiderbody > article + article {
   /* could also use .spiderbody > * + * ... */
   margin-top: 3rem;
-  border-top: thick double cadetblue;
+  border-top: thick double var(--theme-color);
 }
 
 @media screen and (min-width: 786px) {
@@ -188,7 +214,11 @@ article > h2 {
 footer {
   height: 10rem;
   padding-top: 1.5rem;
-  background-image: linear-gradient(white, powderblue 60%, indianred 95%);
+  background-image: linear-gradient(
+    var(--page-background-color),
+    var(--theme-accent) 60%,
+    var(--theme-contrast) 95%
+  );
 }
 
 /* ----------- heart shaped checkbox --------------*/
@@ -197,17 +227,17 @@ footer {
   aspect-ratio: 1 / 0.9;
   position: relative;
   margin: 0 auto;
-  color: indianred;
+  color: var(--theme-contrast);
   padding-top: 15px;
   text-align: center;
   font-size: 16px;
 }
 
 #check:checked + label > .custom:before {
-  background: indianred;
+  background: var(--theme-contrast);
 }
 #check:checked + label > .custom:after {
-  background: indianred;
+  background: var(--theme-contrast);
 }
 
 #check {
@@ -222,21 +252,21 @@ footer {
   top: 0;
   width: 50px;
   height: 80px;
-  _background: indianred;
+  _background: var(--theme-contrast);
   border-radius: 50px 50px 0 0; /* make the top edge round */
   transform: rotate(-45deg); /* 45 degrees rotation counter clockwise */
   transform-origin: 0 100%; /* Rotate it around the bottom-left corner */
-  border-top: 2px solid indianred;
+  border-top: 2px solid var(--theme-contrast);
 }
 
 .custom:after {
   left: 0; /* placing the right part properly */
   transform: rotate(45deg); /* rotating 45 degrees clockwise */
   transform-origin: 100% 100%; /* rotation is around bottom-right corner this time */
-  border-right: 2px solid indianred;
+  border-right: 2px solid var(--theme-contrast);
 }
 .custom:before {
-  border-left: 2px solid indianred;
+  border-left: 2px solid var(--theme-contrast);
 }
 /* source: https://stackoverflow.com/questions/17386168/how-to-create-a-heart-shape-using-css */
 /* ----------- heart shaped checkbox --------------*/
