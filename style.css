@@ -112,13 +112,18 @@ h1 {
   /* could also use .spiderhead a */
   margin-inline: 3rem; /*both sides, otherwise its too much at one side; could also use .nav-link + .nav-link -> margin-left*/
   color: var(--theme-accent);
-  padding-top: 1rem;
+  margin-top: 1rem;
   text-underline-offset: 0.1rem;
   transition: background-color 0.5s;
   _border: 2px solid black;
 }
 
 .nav-link:hover {
+  background-color: var(--shadow-color);
+}
+
+.nav-link:focus {
+  outline: dotted var(--theme-accent);
   background-color: var(--shadow-color);
 }
 
@@ -145,6 +150,12 @@ h1 {
   border-radius: 1.2rem;
   border: 0.1rem solid var(--theme-accent);
   box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem var(--shadow-color); /* offset-x, offset-y, blur-radius, spread-radius, color*/
+  transition: transform 0.3s ease-out;
+}
+
+.spiderhead:hover #hire,
+.spiderhead:focus-within #hire {
+  transform: scale(1.2);
 }
 
 @media screen and (min-width: 992px) {
