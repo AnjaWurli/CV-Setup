@@ -34,6 +34,7 @@ html {
   --page-background-color: white;
   color: var(--shadow-color);
   background-color: var(--page-background-color);
+  transition: color 0.2s ease-in, background 0.2s ease-in;
 }
 
 /*
